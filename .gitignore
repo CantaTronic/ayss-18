@@ -5,7 +5,11 @@
 #technical files
 *.aux
 *.log
+template.tex
+
+#the result file
+main.pdf
 
 #good olg LaTex textbook :)
-#Львовский_LaTex.pdf
+Львовский_LaTex.pdf
 
