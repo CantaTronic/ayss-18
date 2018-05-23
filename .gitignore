@@ -1,0 +1,11 @@
+
+#archives
+*.tar.gz
+
+#technical files
+*.aux
+*.log
+
+#good olg LaTex textbook :)
+#Львовский_LaTex.pdf
+
