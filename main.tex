@@ -10,10 +10,51 @@
 \begin{document}
   \input{title.tex}   %DONE
 
-\section{Introduction}
-  \label{intro}
+% ОБЩИЙ ПЛАН СТАТЬИ
+%
+% 1 мотивация: кинфит - это очень очень нужно и важно
+% 2 кинфит делается посредством минимизации со связями
+% 3 история вопроса: два метода
+% 4 в ОИЯИ был предложен третий метод - очень кратко суть метода -  как расширение минимизатора ФумилиЁ разработанного так же с ОИЯИ
+% 5 минимиатор Фумили хорош тем-то и тем-то (по сравнению с аналогами)
+% 6 метод со связями хорош тем-то и тем-то
+% 7 программная реализацияЁ как и почему
+% 8 пример игрушечный
+% 9 пример настоящий
+% 10 планы и заключение - "спасти человечество"Ё не меньше))
+% 11 библиография
+
+% Фитирование - это настройка весов вычислительной модели таким образом, чтобы она максимально удовлетворяла реальным данным, полученным в эксперименте.
+% При этом чем больше мы имеем данных о физике происходящего процесса, тем более адекватные значения параметров мы сможем поулчить в результате подгонки.
+% Эти данные, будучи выражены в форме уравнений типа ``кракозябра = 0'', называются связями (constraints).
+% Использование такой, более точной, аппроксимации востребовано во многих областях физики. Одной из таких областей является кинематическ
+
+
+\section{Motivation}
+\section{Kinematic fitting}
+\section{Cosntraint minimization aproaches}
+  \subsection{Method of Lagrange multipliers}
+  \subsection{Penalty function method}
+  \subsection{Method of ellimination of differentials}
+%     \input{elDiff.tex}
+\section{Fumili minimizer and Fumili-based realization of MEDiff}
+  %программная реализация будет здесь же
+\section{Example: Monte-Carlo simulation}
+\section{Kinematic fitting at ANKE}
+\section{Conclusion and outlook}
 
 \begin{thebibliography}{00}
+% \bibitem{b1} J.P.~Berge, F.T.~Solmitz, H.D.~Taft, Rev.\ Sci.\ Instr.\ \textbf{32} 538 (1961)
+% \bibitem{b2} R. Bock, CERN 60-30 (1960)
+% \bibitem{b3} G.A. Korn, T.M. Korn, Mathematical handbook for scientists and engineers, McGraw-Hill (1968) 333--335; \foreignlanguage{russian}{Г. Корн, Т. Корн, Справочник по математике для научных работников и инженеров, Наука (1974) 334--336}
+% \bibitem{b4} P. Avery, KWFIT package\\ URL: \texttt{http://www.phys.ufl.edu/\textasciitilde{}avery/kwfit/}
+% \bibitem{b5} V.I. Moroz, JINR communications R-1958 (1965)\\ URL: \texttt{http://nu73-73.jinr.ru/\textasciitilde{}cyrkov/MorozJINRCommR1958.pdf}
+% % \texttt{https://drive.google.com/file/d/1z1hPsccoyXYGA-DT6-7xmeKnYBwPJCS8}
+% \bibitem{b6} V.S. Kurbatov, I.N. Silin, Nucl. Instrum. Meth. Phys. Res. A 345 (1994) 346--350
+% % \bibitem{b7} S.N. Dymov et al., Nucl. Instrum. Meth. Phys. Res. A 440 (2000) 431--437
+% \bibitem{b8} S. Barsov et al., Nucl. Instrum. Meth. Phys. Res. A 462 (2001) 364
+% \bibitem{b9} V. Komarov et al., Phys. Rev. C 93 (2016) 065206
+% \bibitem{b10} S. Dymov et al., FdModule framework\\ URL: \texttt{http://nu73-73.jinr.ru/\textasciitilde{}dymov/FdModule/index.html}
 
 % % Zainon, R., Butler, A. P. H., Cook, N. J., Butzer, J. S., Schleich, N., de Ruiter, N., Tlustos, L., Clark, M. J., Heinz, R. & Butler, P. H. (2010). Construction and operation of the MARS-CT scanner,
 % % Internetworking Indonesia Journal 2(1): 3–10.
