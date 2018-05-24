@@ -1,0 +1,9 @@
+% Penalty-function method}
+\begin{itemize}
+\item Proposed in JINR in mid-sixties, see V.I. Moroz, JINR communications R-1958 (1965);
+\item Adds a so-called ``heavy term'' to the minimized functional, designed in a way that values of constraint functions approach zero as this term approaches infinity:
+\[
+\tilde{\Psi}(x) = F(x) + T\sum_{i=1}^{m}\phi_i^2(x),~T \rightarrow \infty.
+\]
+\item The method is very robust and almost always converges, which could be both a benefit (you won't miss a minimum) and a drawback (you should carefully control that your minimum is reasonable).
+\end{itemize}

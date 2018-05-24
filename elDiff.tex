@@ -1,0 +1,36 @@
+In the neighborhood of a point $x_0$ the functional $F(x)$ could be expressed as
+\begin{equation}\label{func_diff}
+\begin{aligned}
+F(x_0+\Delta x) &= F(x_0) + \sum_{i=1}^n \frac{\partial F(x_0)}{\partial x_i} \Delta x_i + \frac{1}{2}\sum_{i=1}^n\sum_{j=1}^n \Delta x_i \frac{\partial^2 F(x_0)}{\partial x_i \partial x_j} \Delta x_j\\
+&= F(x_0) + G(x_0) \Delta x + \frac{1}{2}\Delta x^T Z(x_0) \Delta x,
+\end{aligned}
+\end{equation}
+and the constraints $\Phi(x)$ as
+\begin{equation}\label{constr_diff}
+\Phi(x_0+\Delta x) =
+\left[
+\begin{aligned}
+\phi_1(x_0) +& \sum_{i=1}^n \frac{\partial \phi_1(x_0)}{\partial x_i}\Delta x_i\\
+&\cdots\\
+\phi_m(x_0) +& \sum_{i=1}^n \frac{\partial \phi_m(x_0)}{\partial x_i}\Delta x_i\\
+\end{aligned}
+\right]
+= \Phi(x_0) + D(x_0) \Delta x.
+\end{equation}
+
+In the matrix equation $\Phi(x) = \Phi(x_0) + D(x_0) \Delta x$ the rectangular matrix $D$ has $m$ rows and $n$ columns (we have $n$ parameters and $m$ constraints).
+
+The vector $\Delta x$ could be split into $\Delta x_c$ that has $m$ components, and $\Delta x_f$ that has $n-m$ components; the same could be done with the matrix $D$. Then
+\begin{equation}\label{phi_split}
+\Phi(x) = \Phi(x_0) + D_c(x_0) \Delta x_c + D_f(x_0) \Delta x_f.
+\end{equation}
+Since \eqref{phi_split} is a linear equation, it could be solved in relation to $\Delta x_c$, resulting in
+\begin{equation}\label{X_c}
+\Delta x_c = \mathbf{v} + M \Delta x_f.
+\end{equation}
+Returning to the initial functional \eqref{func_diff}
+\[F(x) = F(x_0) + G(x_0) \Delta x + \frac{1}{2}\Delta x^T Z(x_0) \Delta x,\]
+we could employ \eqref{X_c} to eliminate the sub-vector $\Delta x_c$, and obtain a similar functional, in contrast depending on only $n-m$ increments $\Delta x_f$:
+\begin{equation}\label{func_fin}
+F(x) = F'(x_0) + G'(x_0) \Delta x_f + \frac{1}{2}\Delta x_f^T Z'(x_0) \Delta x_f.
+\end{equation}

@@ -1,0 +1,26 @@
+
+FUMILI is one of the first minimizers included into ROOT release.
+It has been showing it's reliability, stability and high convergence rate while it had been being used by scientific community for decades.
+
+The greedy minimization algorithm which is employed in FUMILI was first proposed and developed at JINR by I.\,N.~Silin and V.\,S.~Kurbatov.
+
+FUMILI provides an optimal solution for $\chi^2$-like functionals \eqref{xisq_func} employing linearization:
+\begin{equation}
+\label{xisq_func}
+F(x) = \sum_{k=1}^K f_k^2(x) = \sum_{k=1}^K\left(\frac{Y_k - T_k(x)}{\sigma_k} \right)^2,
+\end{equation}
+where $Y_k$ are measured values with errors $\sigma_k$, $k \in [1, K]$, and $T_k(x)$ are the values predicted by the model, depending on some parameters $x = \{x_1, \ldots, x_n\}$.
+
+% {Linearization method in minimizing $\chi^2$-like functionals}
+The second derivative $\displaystyle\frac{\partial^2 F}{\partial x_i x_j}$ could be found the following way:
+\begin{equation}
+\begin{aligned}
+%  \label{linear}
+\frac{\partial^2 F}{\partial x_i \partial x_j} &= \frac{\partial}{\partial x_i}\frac{\partial}{\partial x_j} \sum_{k=1}^K f_k^2(x) = \frac{\partial}{\partial x_i}\sum_{k=1}^K 2 f_k(x) \frac{\partial f_k(x)}{\partial x_j} = \\
+&= 2 \sum_{k=1}^K \left( \frac{\partial f_k(x)}{\partial x_i}\frac{\partial f_k(x)}{\partial x_j} + f_k(x) \frac{\partial^2 f_k(x)}{\partial x_i \partial x_j} \right)
+\end{aligned}
+\end{equation}
+\emph{Linearization} means discarding the second term $\displaystyle f_k\frac{\partial^2 f_k}{\partial x_i \partial x_j}$ employing second derivatives, that is considered small in comparison to the first one $\displaystyle\frac{\partial f_k}{\partial x_i}\frac{\partial f_k}{\partial x_j}$.
+
+Its main benefit is that the error matrix for a linearized functional is always positively defined, and thus each step leads to a minimum.
+
