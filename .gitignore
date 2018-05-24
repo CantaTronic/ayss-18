@@ -5,7 +5,11 @@
 #technical files
 *.aux
 *.log
+*.backup
 template.tex
+
+#interim *.pdf  pictures
+pics/*.pdf
 
 #the result file
 main.pdf
