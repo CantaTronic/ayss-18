@@ -1,13 +1,25 @@
-The problem of minimizing functionals with constraints arises, for example, in the task of kinematic fitting.
-% \begin{block}{Kinematic fitting}
-\begin{itemize}
-\item Tracking detectors provide the coordinates of the triggered sensitive elements along with their errors;
-\item Track-finding involves fitting the particle trajectories to these coordinates;
-\item Sometimes, when the reaction channel is known, the additional information on kinematics could be utilized in terms of
-% \begin{description}
-\item[conservation laws:] $\sum E_\mathrm{initial} = \sum E_\mathrm{final}$, $\displaystyle\sum\vec{P}_\mathrm{initial} = \sum\vec{P}_\mathrm{final}$;
-\item[missing mass:] $\displaystyle\left|\sum\boldsymbol{P}^{(4)}_\mathrm{initial} - \sum\boldsymbol{P}^{(4)}_\mathrm{final}\right|^2 = M_X^2$;
-\end{itemize}
+% The problem of minimizing functionals with constraints arises, for example, in the task of kinematic fitting.
+% % \begin{block}{Kinematic fitting}
+% \begin{itemize}
+% \item Tracking detectors provide the coordinates of the triggered sensitive elements along with their errors;
+% \item Track-finding involves fitting the particle trajectories to these coordinates;
+% \item Sometimes, when the reaction channel is known, the additional information on kinematics could be utilized in terms of
+% % \begin{description}
+% \item[conservation laws:] $\sum E_\mathrm{initial} = \sum E_\mathrm{final}$, $\displaystyle\sum\vec{P}_\mathrm{initial} = \sum\vec{P}_\mathrm{final}$;
+% \item[missing mass:] $\displaystyle\left|\sum\boldsymbol{P}^{(4)}_\mathrm{initial} - \sum\boldsymbol{P}^{(4)}_\mathrm{final}\right|^2 = M_X^2$;
+% \end{itemize}
+%
+% % \end{description}
+% This is called \emph{kinematic fitting}.
 
-% \end{description}
-This is called \emph{kinematic fitting}.
+Поставленная задача нахождения минимума функционала \eqref{track_fit} может быть сформулирована как задача условной минимизации в канонической форме, с учетом известных законов сохранения \eqref{cons_full}--\eqref{cons_miss}, выраженных в виде:
+\begin{equation}
+\label{eq:constr}
+\left\{
+\begin{aligned}
+\phi_1(P) &= 0,\\
+\cdots\\
+\phi_n(P) &= 0.
+\end{aligned}
+\right.
+\end{equation}
