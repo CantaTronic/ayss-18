@@ -1,10 +1,19 @@
-% Method of Lagrange multipliers
-These solutions used a method of Lagrange multipliers~\cite{b3}. It still remains the most widely used method for kinematic fitting, see e.g.~\cite{b4}.
+% % Method of Lagrange multipliers
+% These solutions used a method of Lagrange multipliers~\cite{b3}. It still remains the most widely used method for kinematic fitting, see e.g.~\cite{b4}.
+%
+% \begin{itemize}
+% \item First proposed at early sixties, see e.\,g.\ J.\,P.~Berge, F.\,T.~Solmitz, H.\,D.~Taft, Rev.\ Sci.\ Instr.\ 32 (1961) 538;
+% \item Uses \emph{Lagrange multipliers} $\lambda_i$, obtained from the equations
+% \[\frac{\partial\Psi}{\partial x_1} = \frac{\partial\Psi}{\partial x_2} = \cdots = \frac{\partial\Psi}{\partial x_n} = 0,\]
+% where $\displaystyle\Psi(x) = F(x) + \sum_{i=1}^m\lambda_i\phi_i(x);$
+% \item Still the most widely used method for kinematic fitting, see e.\,g.\ KWFIT package \texttt{http://www.phys.ufl.edu/\textasciitilde{}avery/kwfit/}.
+% \end{itemize}
 
-\begin{itemize}
-\item First proposed at early sixties, see e.\,g.\ J.\,P.~Berge, F.\,T.~Solmitz, H.\,D.~Taft, Rev.\ Sci.\ Instr.\ 32 (1961) 538;
-\item Uses \emph{Lagrange multipliers} $\lambda_i$, obtained from the equations
-\[\frac{\partial\Psi}{\partial x_1} = \frac{\partial\Psi}{\partial x_2} = \cdots = \frac{\partial\Psi}{\partial x_n} = 0,\]
-where $\displaystyle\Psi(x) = F(x) + \sum_{i=1}^m\lambda_i\phi_i(x);$
-\item Still the most widely used method for kinematic fitting, see e.\,g.\ KWFIT package \texttt{http://www.phys.ufl.edu/\textasciitilde{}avery/kwfit/}.
-\end{itemize}
+Метод множителей Лагранжа является классическим подходом, нашедшим свое широкое применение в различных областях деятелньости человека. Задачу (1), (4) предлагается решать путем нахождения экстремума функции Лагранжа:
+\begin{equation}
+ \label{lagr}
+ L_j(P^j, \lambda^j) = F(P^j, \hat{c}_i^j) + \sum_k \lambda^j_k \varphi_k(P^j),
+\end{equation}
+необходимым условием которого является равенство нулю ее частных производных по переменным $P^j$ и неопределенным множителям $\lambda^j_k$:
+\[\frac{\partial L_j}{\partial P^j_1} = \frac{\partial L_j}{\partial P^j_2} = \cdots = \frac{\partial L_j}{\partial P^j_n} = \frac{\partial L_j}{\partial \lambda^j_1} = \cdots = \frac{\partial L_j}{\partial \lambda^j_k} = 0,\]
+Далее полученная система может быть решена с помощью метода Гаусса или используя формулы Крамера.
