@@ -1,9 +1,22 @@
-% Penalty-function method}
-\begin{itemize}
-\item Proposed in JINR in mid-sixties, see V.I. Moroz, JINR communications R-1958 (1965);
-\item Adds a so-called ``heavy term'' to the minimized functional, designed in a way that values of constraint functions approach zero as this term approaches infinity:
-\[
-\tilde{\Psi}(x) = F(x) + T\sum_{i=1}^{m}\phi_i^2(x),~T \rightarrow \infty.
-\]
-\item The method is very robust and almost always converges, which could be both a benefit (you won't miss a minimum) and a drawback (you should carefully control that your minimum is reasonable).
-\end{itemize}
+% % Penalty-function method}
+% \begin{itemize}
+% \item Proposed in JINR in mid-sixties, see V.I. Moroz, JINR communications R-1958 (1965);
+% \item Adds a so-called ``heavy term'' to the minimized functional, designed in a way that values of constraint functions approach zero as this term approaches infinity:
+% \[
+% \tilde{\Psi}(x) = F(x) + T\sum_{i=1}^{m}\phi_i^2(x),~T \rightarrow \infty.
+% \]
+% \item The method is very robust and almost always converges, which could be both a benefit (you won't miss a minimum) and a drawback (you should carefully control that your minimum is reasonable).
+% \end{itemize}
+
+\textcolor{red}{TODO: привести к общему знаменателю обозначения в формуле с обозначениями в остальной статье!!!}
+
+Метод кинематического фита с тяжелым членом, предложенный В.И.Морозом, основан на методе штрафных функций решения задач условной оптимизации.
+
+Суть метода состоит в сведении задачи минимизации функции \label{track_fit} при выполнении условий \eqref{eq:constr} к задаче поиска безусловного минимума функции
+\begin{equation}
+ \tilde{\Psi}(x) = F(x) + T\sum_{i=1}^{m}\phi_i^2(x),~T \rightarrow \infty.
+\end{equation}
+
+При этом функцию $ \tilde{\Psi}(x)$ называют штрафной или функцией с тяжёлым членом $T$. При такой постановке при выходе за пределы, задаваемые ограничениями \eqref{eq:constr}, слагаемое ``с тяжёлыми членом'' будет увеличивать значение минимизируемой функции, таким образом гарантируя, что оптимальное значение может быть найдено только в пределах области ограничений.
+
+Минимизация штрафной функции может выполняться с использованием любого метода оптимизации, например, градиентного спуска.
