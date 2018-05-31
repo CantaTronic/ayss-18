@@ -12,8 +12,9 @@
 Метод множителей Лагранжа является классическим подходом, нашедшим свое широкое применение в различных областях деятелньости человека. Задачу \label{track_fit}, \eqref{eq:constr} предлагается решать путем нахождения экстремума функции Лагранжа:
 \begin{equation}
  \label{lagr}
- \mathcal{L}(P, c_i, \lambda) = F(P, c_i) + \sum_k \lambda_k \phi_k(P),
+ \mathcal{L}(P, c, \lambda) = F(P, c) + \sum_{k=1}^{n_c} \lambda_k \phi_k(P),
 \end{equation}
-необходимым условием которого является равенство нулю ее частных производных по переменным $P$ и неопределенным множителям $\lambda_k$:
-\[\frac{\partial \mathcal{L}}{\partial P_1} = \frac{\partial \mathcal{L}}{\partial P_2} = \cdots = \frac{\partial \mathcal{L}}{\partial P_n} = \frac{\partial \mathcal{L}}{\partial \lambda_1} = \cdots = \frac{\partial \mathcal{L}}{\partial \lambda_k} = 0,\]
+необходимым условием которого является равенство нулю ее частных производных по переменным $P_i, ~i \in [0, n_p]$ и неопределенным множителям $\lambda_k$:
+\[\frac{\partial \mathcal{L}}{\partial P_1} = \frac{\partial \mathcal{L}}{\partial P_2} = \cdots = \frac{\partial \mathcal{L}}{\partial P_{n_p}} = \frac{\partial \mathcal{L}}{\partial \lambda_1} = \cdots = \frac{\partial \mathcal{L}}{\partial \lambda_{n_c}} = 0,\]
+% где $n_p$ - число искомых параметров.
 Далее полученная система может быть решена с помощью метода Гаусса или используя формулы Крамера.
