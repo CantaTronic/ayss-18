@@ -1,10 +1,22 @@
-In the neighborhood of a point $x_0$ the functional $F(x)$ could be expressed as
+\textcolor{red}{TODO: привести к общему знаменателю обозначения в формуле с обозначениями в остальной статье!!!}
+
+% обозначим через $np$ число параметров, от которых зависит функционал \eqref{track_fit}, $nc$ - xbckj
+В близи фиксированной точки $P_0$ функционал \eqref{track_fit} может быть представлен степенным рядом
+% In the neighborhood of a point $x_0$ the functional $F(x)$ could be expressed as
 \begin{equation}\label{func_diff}
 \begin{aligned}
-F(x_0+\Delta x) &= F(x_0) + \sum_{i=1}^n \frac{\partial F(x_0)}{\partial x_i} \Delta x_i + \frac{1}{2}\sum_{i=1}^n\sum_{j=1}^n \Delta x_i \frac{\partial^2 F(x_0)}{\partial x_i \partial x_j} \Delta x_j\\
-&= F(x_0) + G(x_0) \Delta x + \frac{1}{2}\Delta x^T Z(x_0) \Delta x,
+F(P_0+\Delta P) &= F(P_0) + \sum_{i=1}^n \frac{\partial F(P_0)}{\partial P_i} \Delta P_i + \frac{1}{2}\sum_{i=1}^n\sum_{j=1}^n \Delta P_i \frac{\partial^2 F(P_0)}{\partial P_i \partial P_j} \Delta P_j\\
+&= F(P_0) + G(P_0) \Delta P + \frac{1}{2}\Delta P^T Z(P_0) \Delta P,
 \end{aligned}
 \end{equation}
+Данную формулу можно переписать в матричном виде как:
+
+\begin{equation}
+ \label{eq_diff1}
+x^2
+\end{equation}
+
+
 and the constraints $\Phi(x)$ as
 \begin{equation}\label{constr_diff}
 \Phi(x_0+\Delta x) =
