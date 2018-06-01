@@ -4,22 +4,20 @@
 В близи фиксированной точки $P_0$ функционал \eqref{track_fit} может быть представлен степенным рядом
 % In the neighborhood of a point $x_0$ the functional $F(x)$ could be expressed as
 \begin{equation}\label{func_diff}
-\begin{aligned}
-F(P_0+\Delta P) &= F(P_0) + \sum_{i=1}^n \frac{\partial F(P_0)}{\partial P_i} \Delta P_i + \frac{1}{2}\sum_{i=1}^n\sum_{j=1}^n \Delta P_i \frac{\partial^2 F(P_0)}{\partial P_i \partial P_j} \Delta P_j\\
-&= F(P_0) + G(P_0) \Delta P + \frac{1}{2}\Delta P^T Z(P_0) \Delta P,
-\end{aligned}
+% \begin{aligned}
+F(P_0+\Delta P) = F(P_0) + \sum_{i=1}^n \frac{\partial F(P_0)}{\partial P_i} \Delta P_i + \frac{1}{2}\sum_{i=1}^n\sum_{j=1}^n \Delta P_i \frac{\partial^2 F(P_0)}{\partial P_i \partial P_j} \Delta P_j
+% \end{aligned}
 \end{equation}
 Данную формулу можно переписать в матричном виде как:
-
 \begin{equation}
  \label{eq_diff1}
-x^2
+F(P_0) + G(P_0) \Delta P + \frac{1}{2}\Delta P^T Z(P_0) \Delta P,
 \end{equation}
+где $G(P_0)$ это градиент, а $Z(P_0)$ - матрица Гессе.
 
-
-and the constraints $\Phi(x)$ as
+and the constraints $\phi(x)$ as
 \begin{equation}\label{constr_diff}
-\Phi(x_0+\Delta x) =
+\phi(x_0+\Delta x) =
 \left[
 \begin{aligned}
 \phi_1(x_0) +& \sum_{i=1}^n \frac{\partial \phi_1(x_0)}{\partial x_i}\Delta x_i\\
@@ -27,14 +25,14 @@ and the constraints $\Phi(x)$ as
 \phi_m(x_0) +& \sum_{i=1}^n \frac{\partial \phi_m(x_0)}{\partial x_i}\Delta x_i\\
 \end{aligned}
 \right]
-= \Phi(x_0) + D(x_0) \Delta x.
+= \phi(x_0) + D(x_0) \Delta x.
 \end{equation}
 
-In the matrix equation $\Phi(x) = \Phi(x_0) + D(x_0) \Delta x$ the rectangular matrix $D$ has $m$ rows and $n$ columns (we have $n$ parameters and $m$ constraints).
+In the matrix equation $\phi(x) = \phi(x_0) + D(x_0) \Delta x$ the rectangular matrix $D$ has $m$ rows and $n$ columns (we have $n$ parameters and $m$ constraints).
 
 The vector $\Delta x$ could be split into $\Delta x_c$ that has $m$ components, and $\Delta x_f$ that has $n-m$ components; the same could be done with the matrix $D$. Then
 \begin{equation}\label{phi_split}
-\Phi(x) = \Phi(x_0) + D_c(x_0) \Delta x_c + D_f(x_0) \Delta x_f.
+\phi(x) = \phi(x_0) + D_c(x_0) \Delta x_c + D_f(x_0) \Delta x_f.
 \end{equation}
 Since \eqref{phi_split} is a linear equation, it could be solved in relation to $\Delta x_c$, resulting in
 \begin{equation}\label{X_c}
