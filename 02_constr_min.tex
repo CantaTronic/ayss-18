@@ -12,13 +12,19 @@
 % % \end{description}
 % This is called \emph{kinematic fitting}.
 
-The proposed problem of finding a minimum for the functional \eqref{track_fit} could be formulated as a conditional-minimization problem in canonical form, taking into account the known conservation laws (\ref{cons_full}--\ref{cons_miss}), expressed as
+% The minimum search for the functional \eqref{track_fit} could be formulated as a conditional-minimization problem in canonical form, 
+% taking into account the known 
+
+The conservation laws (\ref{cons_full}--\ref{cons_miss}), could be expressed as
 % Поставленная задача нахождения минимума функционала \eqref{track_fit} может быть сформулирована как задача условной минимизации в канонической форме, с учетом известных законов сохранения \eqref{cons_full}--\eqref{cons_miss}, выраженных в виде:
 \begin{equation}
 \label{eq:constr}
 \phi_k(\boldsymbol{p}) = 0, 1 \leqslant k  \leqslant m,
 \end{equation}
 where $m$ is a number of constraints.
+
+Then \eqref{track_fit}, \eqref{eq:constr} is a constraint minimization problem written into the augmented form.
+
 The subject of interest is cases when the system of equations \eqref{eq:constr} is non-linear and solving it directly is either impossible or impractical. % в условиях заданных внешних ораничений?
 % Предмет интереса представляют случаи, когда система \eqref{eq:constr} является нелинейной и её решение ``в лоб'' является невозможным либо нецелесообразным в условиях заданных внешних ораничений.
 So we need not to lose important information and make calculations as accurately as possible, at the same time keeping within the limitations of time and computational intensity of the work.
