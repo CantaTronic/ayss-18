@@ -19,7 +19,7 @@
 A track reconstruction  problem in general can be understood as a problem of multidimensional linear regression.
 Here, for every track $j$ we are looking for a such initial momenta $\boldsymbol{p}^j$ that the reconstructed coordinates of detector 
 hits $\hat{c}_i^j(\boldsymbol{p}^j)$, where $i$ is a hit number, would be as close as possible to the registered hit coordinates $c_i^j$, 
-taking into account the known detector uncertainties $\delta c_{i^j}$.
+taking into account the known detector uncertainties $\delta c_i^j$.
 % Задача восстановления трека частицы (фитирования) в общем случае представляет собой задачу многомерной линейной реграссии: для каждого из треков $j$ требуется найти изначальные импульсы $P^j$, такие, чтобы теоретически вычислимое положение точек трека $\hat{c}_i^j(P^j)$, где $i$ - номер координаты точки, максимально приближалось к фактическому распределению точек $c_i^j$, при этом учитывая известные ошибки детектора $\delta c_{i^j}$.
 % The actual problem we are solving is the minimization problem for the functional
 In the over words, the tasks to be solved here is a minimization of the functional:
@@ -31,7 +31,7 @@ F(\boldsymbol{p}^j, c_i^j) = \sum_i \left(\frac{c_i^j - \hat{c}_i^j(\boldsymbol{
 Further we would omit the indices $i$, $j$ for simplicity, so that $\boldsymbol{c}$ and $\boldsymbol{p}$ would be vectors of all hits and momentum components correspondingly.
 % Здесь и далее для простоты будем опускать коэффициенты $i,~j$.
 
-Often one could get an additional information in reaction kinematics in a form of the energy-momentum conservation laws
+Often one could get an additional information from reaction kinematics in a form of the energy-momentum conservation laws
 % Зачастую известна дополнительная информация о кинематике реакции в виде законов сохранения энергии и импульса
 \begin{equation}
 \label{cons_full}
@@ -44,10 +44,10 @@ or, in case of one of the final particles is not registered,
 \end{equation}
 where $\mathcal{P}$ is a four-momentum of a particle, and $M_X$ is a reaction missing mass.
 
-Using \eqref{cons_full}, \eqref{cons_miss} allows us to narrow down the multidimensional domain of the functional \eqref{track_fit} 
+Using \eqref{cons_full}, \eqref{cons_miss} allows us to narrow down the multidimensional domain of functional \eqref{track_fit} 
 and improves the precision of the result.
 % Её использование позволяет сузить многомерную область определения данного функционала и положительно влияет на точность получаемого решения.
-A proceure that takes the kinematis constraints into account is called kinematic fitting.
+A procedure that takes the kinematics constraints into account is called kinematic fitting.
 This method is widely employed in high energy physics, e.g.\ in experiments like 
 % Выполняемый с учётом данных условий фит называется кинематическим и находит широкое применение в ФЭЧ, например, в таких экспериментах как
 BES-III~\cite{BESIII}, % http://iopscience.iop.org/article/10.1088/1674-1137/34/2/009/meta

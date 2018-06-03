@@ -2,11 +2,11 @@
 
 % обозначим через $np$ число параметров, от которых зависит функционал \eqref{track_fit}, $nc$ - xbckj
 % Вблизи фиксированной точки $P_0$ функционал \eqref{track_fit} может быть представлен степенным рядом
-In a neighborhood of a fixed point $\boldsymbol{p}^*$ the functional \eqref{track_fit} can be represented by a power series
+In a neighborhood of a fixed point $\boldsymbol{p}^*$ functional \eqref{track_fit} can be represented by a power series
 \begin{equation}\label{func_diff}
 F(\boldsymbol{p}^*+\Delta\boldsymbol{p}) = F(\boldsymbol{p}^*) + \sum_{i=1}^n \frac{\partial F(\boldsymbol{p}^*)}{\partial p_i} \Delta p_i + \frac{1}{2}\sum_{i=1}^n\sum_{j=1}^n \Delta p_i \frac{\partial^2 F(\boldsymbol{p}^*)}{\partial p_i \partial p_j} \Delta p_j
 \end{equation}
-and the constraints \eqref{eq:constr} by
+and constraints \eqref{eq:constr} by
 \begin{equation}\label{constr_diff}
 \phi_k(\boldsymbol{p}^*+\Delta\boldsymbol{p}) = \phi_k(\boldsymbol{p}^*) + \sum_{i=1}^n \frac{\partial \phi_k(\boldsymbol{p}^*)}{\partial p_i}\Delta p_i = 0
 % = \phi(x_0) + D(x_0) \Delta x.
@@ -31,7 +31,7 @@ Since \eqref{phi_split} is a linear equation, it could be solved in relation to 
 \begin{equation}\label{P_c}
 \Delta\boldsymbol{p}_c = \boldsymbol{v} + M \Delta\boldsymbol{p}_f.
 \end{equation}
-Returning to the initial functional \eqref{eq_diff1}, we could employ \eqref{P_c} to eliminate the sub-vector $\Delta\boldsymbol{p}_c$, and obtain a similar functional, in contrast depending on only $n-m$ increments $\Delta\boldsymbol{p}_f$:
+Returning to initial functional \eqref{eq_diff1}, we could employ \eqref{P_c} to eliminate the sub-vector $\Delta\boldsymbol{p}_c$, and obtain a similar functional, in contrast depending on only $n-m$ increments $\Delta\boldsymbol{p}_f$:
 \begin{equation}\label{func_fin}
 F(\boldsymbol{p}^*+\Delta\boldsymbol{p}) = \tilde F(\boldsymbol{p}^*) + \tilde G(\boldsymbol{p}^*) \Delta\boldsymbol{p}_f + \frac{1}{2}\Delta\boldsymbol{p}_f^T \tilde Z(\boldsymbol{p}^*) \Delta\boldsymbol{p}_f.
 \end{equation}
