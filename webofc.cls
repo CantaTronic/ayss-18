@@ -107,7 +107,7 @@
 }
 %
 \DeclareOption{anglais}{%
-    \def\woc@language{\RequirePackage[english, russian]{babel}}%     %edited bt VT, 13.11.17
+    \def\woc@language{\RequirePackage[english]{babel}}%     %edited bt VT, 13.11.17
 }
 % \DeclareOption{rus}{%
 %     \def\woc@language{\RequirePackage[russian]{babel}}%     %edited bt VT, 13.11.17
