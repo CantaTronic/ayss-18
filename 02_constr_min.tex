@@ -12,17 +12,14 @@
 % % \end{description}
 % This is called \emph{kinematic fitting}.
 
-Поставленная задача нахождения минимума функционала \eqref{track_fit} может быть сформулирована как задача условной минимизации в канонической форме, с учетом известных законов сохранения \eqref{cons_full}--\eqref{cons_miss}, выраженных в виде:
+The proposed problem of finding a minimum for the functional \eqref{track_fit} could be formulated as a conditional-minimization problem in canonical form, taking into account the known conservation laws (\ref{cons_full}--\ref{cons_miss}), expressed as
+% Поставленная задача нахождения минимума функционала \eqref{track_fit} может быть сформулирована как задача условной минимизации в канонической форме, с учетом известных законов сохранения \eqref{cons_full}--\eqref{cons_miss}, выраженных в виде:
 \begin{equation}
 \label{eq:constr}
-% \left\{
-% \begin{aligned}
-% \phi_1(P) &= 0,\\
-% \cdots\\
-% \phi_k(P) &= 0.
-% \end{aligned}
-% \right.
-\phi_k(P) = 0, 1 \leqslant k  \leqslant n_c.
+\phi_k(\boldsymbol{p}) = 0, 1 \leqslant k  \leqslant m,
 \end{equation}
-Предмет интереса представляют случаи, когда система \eqref{eq:constr} является нелинейной и её решение ``в лоб'' является невозможным либо нецелесообразным в условиях заданных внешних ораничений.
-Возникает необходимость не потерять важную информацию и провести расчёты максимально точно, при этом уложившись в ограничения по времени и трудоемкости работы.
+where $m$ is a number of constraints.
+The subject of interest is cases when the system of equations \eqref{eq:constr} is non-linear and solving it directly is either impossible or impractical. % в условиях заданных внешних ораничений?
+% Предмет интереса представляют случаи, когда система \eqref{eq:constr} является нелинейной и её решение ``в лоб'' является невозможным либо нецелесообразным в условиях заданных внешних ораничений.
+So we need not to lose important information and make calculations as accurately as possible, at the same time keeping within the limitations of time and computational intensity of the work.
+% Возникает необходимость не потерять важную информацию и провести расчёты максимально точно, при этом уложившись в ограничения по времени и трудоемкости работы.

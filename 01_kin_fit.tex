@@ -16,29 +16,38 @@
 % where $P$ is a vector of parameters.
 % в большинстве случаев данные уравнения связи являются нелинейными и сложными, и сокращение размерности системы \eqref{eq:constr} путем непосредственного решения оказывается невозможным или не имеющим смысла.
 
-Задача восстановления трека частицы (фитирования) в общем случае представляет собой задачу многомерной линейной реграссии: для каждого из треков $j$ требуется найти изначальные импульсы $P^j$, такие, чтобы теоретически вычислимое положение точек трека $\hat{c}_i^j(P^j)$, где $i$ - номер координаты точки, максимально приближалось к фактическому распределению точек $c_i^j$, при этом учитывая известные ошибки детектора $\delta c_{i^j}$. Фактически, решается задача минимизации функционала:
+The problem of track reconstruction is generally a problem of multidimensional linear regression: for each of the tracks $j$ we need to find such initial momenta $\boldsymbol{p}^j$ that the reconstructed coordinates of detector hits $\hat{c}_i^j(\boldsymbol{p}^j)$, where $i$ is a hit number, would be a close a possible to the registered hit coordinates $c_i^j$, taking into account the known detector uncertainties $\delta c_{i^j}$.
+% Задача восстановления трека частицы (фитирования) в общем случае представляет собой задачу многомерной линейной реграссии: для каждого из треков $j$ требуется найти изначальные импульсы $P^j$, такие, чтобы теоретически вычислимое положение точек трека $\hat{c}_i^j(P^j)$, где $i$ - номер координаты точки, максимально приближалось к фактическому распределению точек $c_i^j$, при этом учитывая известные ошибки детектора $\delta c_{i^j}$.
+The actual problem we are solving is the minimization problem for the functional
+% Фактически, решается задача минимизации функционала:
 \begin{equation}
 \label{track_fit}
-F(P^j, c_i^j) = \sum_i \frac{(c_i^j - \hat{c}_i^j(P^j))^2}{{\delta c_i^j}^2}.
+F(\boldsymbol{p}^j, c_i^j) = \sum_i \left(\frac{c_i^j - \hat{c}_i^j(\boldsymbol{p}^j)}{\delta c_i^j}\right)^2.
 \end{equation}
-Здесь и далее для простоты будем опускать коэффициенты $i,~j$.
+Further we would omit the indices $i$, $j$ for simplicity, so that $\boldsymbol{c}$ and $\boldsymbol{p}$ would be the vectors of all hits and momentum components correspondingly.
+% Здесь и далее для простоты будем опускать коэффициенты $i,~j$.
 
-Зачастую известна дополнительная информация о кинематике реакции в виде законов сохранения энергии и импульса
+Often we could get the additional information in reaction kinematics in the form of energy-momentum conservation laws
+% Зачастую известна дополнительная информация о кинематике реакции в виде законов сохранения энергии и импульса
 \begin{equation}
 \label{cons_full}
-\sum E_\mathrm{initial} = \sum E_\mathrm{final},~\sum\vec{P}_\mathrm{initial} = \sum\vec{P}_\mathrm{final};
+\sum\mathcal{P}_\mathrm{initial} = \sum\mathcal{P}_\mathrm{final}
 \end{equation}
-или
+or, when one of the final particles is not registered,
 \begin{equation}
 \label{cons_miss}
-\displaystyle\left|\sum\boldsymbol{P}_\mathrm{initial} - \sum\boldsymbol{P}_\mathrm{final}\right|^2 = M_X^2,
+\displaystyle\left|\sum\mathcal{P}_\mathrm{initial} - \sum\mathcal{P}_\mathrm{final}\right|^2 = M_X^2,
 \end{equation}
-where $E$ is the energy of a particle, $\vec{P}$ and $\boldsymbol{P}$ are its three- and four-momenta correspondingly, and $M_X$ is the reaction missing mass.
+where $\mathcal{P}$ is the four-momentum of a particle, and $M_X$ is the reaction missing mass.
 
-Её использование позволяет сузить многомерную область определения данного функционала и положительно влияет на точность получаемого решения. Выполняемый с учётом данных условйи фит называется кинематическим и находит широкое применение в ФЭЧ, например, в таких экспериментах как
+Using them allows to narrow down the multidimensional domain of this functional and improves the precision of the solution.
+% Её использование позволяет сузить многомерную область определения данного функционала и положительно влияет на точность получаемого решения.
+The fitting that takes these conditions into account is called kinematic.
+It is widely employed in high energy physics, e.g.\ in experiments like 
+% Выполняемый с учётом данных условий фит называется кинематическим и находит широкое применение в ФЭЧ, например, в таких экспериментах как
 BES-III, % http://iopscience.iop.org/article/10.1088/1674-1137/34/2/009/meta
 CLAS, % https://scholar.google.ru/scholar?cites=6441758058779809394&as_sdt=2005&sciodt=0,5&hl=ru
 CMS. % http://cds.cern.ch/record/926540
 
-
-В данной статье мы собираемся рассказать об опыте разработки Fumiliu-based фреймвока для кинематического фита, в настоящий момент применяемого авторами для кинематического фита в эксперименте ANKE (Jülich, Germany)~\cite{anke}.
+In this paper we are going to cover the development of a Fumili-based framework for kinematic fitting that is currently used by the authors for kinematic fitting in the ANKE experiment (Jülich, Germany)~\cite{anke}.
+% В данной статье мы собираемся рассказать об опыте разработки Fumili-based фреймвока для кинематического фита, в настоящий момент применяемого авторами для кинематического фита в эксперименте ANKE (Jülich, Germany)~\cite{anke}.

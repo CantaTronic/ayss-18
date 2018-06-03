@@ -9,12 +9,18 @@
 % \item Still the most widely used method for kinematic fitting, see e.\,g.\ KWFIT package \texttt{http://www.phys.ufl.edu/\textasciitilde{}avery/kwfit/}.
 % \end{itemize}
 
-Метод множителей Лагранжа является классическим подходом, нашедшим свое широкое применение в различных областях деятелньости человека. Задачу \label{track_fit}, \eqref{eq:constr} предлагается решать путем нахождения экстремума функции Лагранжа:
+% Метод множителей Лагранжа является классическим подходом, нашедшим свое широкое применение в различных областях деятелньости человека.
+The method of Lagrange multipliers is a classical approach that has found its wide application in various areas of human activity.
+% Задачу \eqref{track_fit}, \eqref{eq:constr} предлагается решать путем нахождения экстремума функции Лагранжа:
+It is proposed to solve the task \eqref{track_fit}, \eqref{eq:constr} by finding the extremum of the Lagrange function
 \begin{equation}
- \label{lagr}
- \mathcal{L}(P, c, \lambda) = F(P, c) + \sum_{k=1}^{n_c} \lambda_k \phi_k(P),
+\label{lagr}
+\mathcal{L}(\boldsymbol{p}, \boldsymbol{c}, \boldsymbol{\lambda}) = F(\boldsymbol{p}, \boldsymbol{c}) + \sum_{k=1}^{m} \lambda_k \phi_k(\boldsymbol{p}),
 \end{equation}
-необходимым условием которого является равенство нулю ее частных производных по переменным $P_i, ~i \in [0, n_p]$ и неопределенным множителям $\lambda_k$:
-\[\frac{\partial \mathcal{L}}{\partial P_1} = \frac{\partial \mathcal{L}}{\partial P_2} = \cdots = \frac{\partial \mathcal{L}}{\partial P_{n_p}} = \frac{\partial \mathcal{L}}{\partial \lambda_1} = \cdots = \frac{\partial \mathcal{L}}{\partial \lambda_{n_c}} = 0,\]
+% необходимым условием которого является равенство нулю ее частных производных по переменным $P_i, ~i \in [0, n_p]$ и неопределенным множителям $\lambda_k$:
+that implies the necessary condition of vanishing of its partial derivatives with respect to the variables $p_i$, $i \in [0, n]$ and the undefined multipliers $\lambda_k$:
+\[\frac{\partial \mathcal{L}}{\partial p_1} = \frac{\partial \mathcal{L}}{\partial p_2} = \cdots = \frac{\partial \mathcal{L}}{\partial p_{n}} = \frac{\partial \mathcal{L}}{\partial \lambda_1} = \cdots = \frac{\partial \mathcal{L}}{\partial \lambda_{m}} = 0,\]
+where $n$ is the number of unknown parameters.
 % где $n_p$ - число искомых параметров.
-Далее полученная система может быть решена с помощью метода Гаусса или используя формулы Крамера.
+Further, the resulting system can be solved using the Gauss' method or Cramer's rules.
+% Далее полученная система может быть решена с помощью метода Гаусса или используя формулы Крамера.

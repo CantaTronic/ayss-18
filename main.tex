@@ -7,6 +7,8 @@
 \documentclass{webofc}
 \usepackage[varg]{txfonts}   % Web of Conferences font
 \usepackage{color}
+\usepackage{graphicx}
+\usepackage[russian,english]{babel}
 % \usepackage[usenames]{color}
 % \usepackage{colortbl}
 %
@@ -35,20 +37,22 @@
 
 \section{Kinematic fitting}
 \input{01_kin_fit.tex}
-\section{Cosntraint minimization}
+\section{Constrained minimization}
 \input{02_constr_min.tex}
-\section{Methods}
-  \input{constrMinIntro.tex}
-  \subsection{Method of Lagrange multipliers}
-  \input{LagrMult.tex}
-  \subsection{Penalty function method}
-  \input{penalty.tex}
-  \subsection{Method of ellimination of differentials}
+% \section{Methods}
+\input{constrMinIntro.tex}
+%   \subsection{Method of Lagrange multipliers}
+%   \input{LagrMult.tex}
+%   \subsection{Penalty function method}
+%   \input{penalty.tex}
+  \subsection{Method of elimination of differentials}
   \input{elDiff.tex}
 \section{Fumili minimizer and Fumili-based realization of MEDiff}
-\input{fumili.tex}
+\textcolor{red}{Some words about Fumili and its advantages.}
+% \input{fumili.tex}
+\textcolor{red}{What do we need to write about implementation?}
 %   программная реализация будет здесь же
- \input{progImpl.tex}
+\input{progImpl.tex}
 \section{Example: Monte-Carlo simulation}
 \input{toyExpl.tex}
 \section{Kinematic fitting at ANKE}

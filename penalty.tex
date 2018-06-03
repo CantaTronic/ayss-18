@@ -9,14 +9,19 @@
 % \end{itemize}
 
 %
+The method of kinematic fitting employing a ``heavy term'', proposed by Moroz~\cite{b5}, is based on the method of penalty functions for solving conditional optimization problems.
+% Метод кинематического фита с тяжелым членом, предложенный В.И.Морозом, основан на методе штрафных функций решения задач условной оптимизации.
 
-Метод кинематического фита с тяжелым членом, предложенный В.И.Морозом, основан на методе штрафных функций решения задач условной оптимизации.
-
-Суть метода состоит в сведении задачи минимизации функции \label{track_fit} при выполнении условий \eqref{eq:constr} к задаче поиска безусловного минимума функции
+The essence of the method is to reduce the task of minimizing the function \eqref{track_fit} with the conditions \eqref{eq:constr} to the problem of finding the unconditional minimum of the function
+% Суть метода состоит в сведении задачи минимизации функции \eqref{track_fit} при выполнении условий \eqref{eq:constr} к задаче поиска безусловного минимума функции
 \begin{equation}
- \tilde{\Psi}(P, c) = F(P, c) + T\sum_{k=1}^{K}\phi_k^2(P),~T \rightarrow \infty.
+\hat{F}(\boldsymbol{p}, \boldsymbol{c}) = F(\boldsymbol{p}, \boldsymbol{c}) + T\sum_{k=1}^{m}\phi_k^2(\boldsymbol{p}),~T \rightarrow \infty.
 \end{equation}
 
-При этом функцию $ \tilde{\Psi}(P, c)$ называют штрафной или функцией с тяжёлым членом $T$. При такой постановке при выходе за пределы, задаваемые ограничениями \eqref{eq:constr}, слагаемое ``с тяжёлыми членом'' будет увеличивать значение минимизируемой функции, таким образом гарантируя, что оптимальное значение может быть найдено только в пределах области ограничений.
+% При этом функцию $\tilde{\Psi}(P, c)$ называют штрафной или функцией с тяжёлым членом $T$.
+In this case, the function $\hat{F}(\boldsymbol{p}, \boldsymbol{c})$ is called a penalty function or a function with a ``heavy term'' $\displaystyle T\sum_{k=1}^{m}\phi_k^2(\boldsymbol{p})$.
+% При такой постановке при выходе за пределы, задаваемые ограничениями \eqref{eq:constr}, слагаемое ``с тяжёлыми членом'' будет увеличивать значение минимизируемой функции, таким образом гарантируя, что оптимальное значение может быть найдено только в пределах области ограничений.
+With this formulation of the problem, if we exceed the limits specified by the constraints \eqref{eq:constr}, the ``heavy term'' will increase the value of the minimized functional, thus ensuring that the optimal value can be found only within the constraint area.
 
-Минимизация штрафной функции может выполняться с использованием любого метода оптимизации, например, градиентного спуска.
+% Минимизация штрафной функции может выполняться с использованием любого метода оптимизации, например, градиентного спуска.
+The minimization of the penalty function can be performed using any optimization method, for example, gradient descent.
