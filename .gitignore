@@ -7,6 +7,10 @@
 *.log
 *.backup
 template.tex
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
 
 #interim *.pdf  pictures
 pics/*.pdf
@@ -16,4 +20,3 @@ main.pdf
 
 #good olg LaTex textbook :)
 Львовский_LaTex.pdf
-
