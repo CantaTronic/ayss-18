@@ -4,10 +4,10 @@
 % TODO: There must be an explanation of why we include it specifically in Fumili.
 % Well, or it should appear in the previous part, where we've spoken about Fumili.
 % }
-Fumili, a package for minimizing the $\chi^2$-like functionals is one of the first minimizers included into ROOT release.
+Fumili, a package for minimizing the $\chi^2$-like functionals, is one of the first minimizers included into ROOT release.
 It has been showing it's reliability, stability and high convergence rate while it had been being used by scientific community for decades.
 
-The greedy minimization algorithm which is employed in Fumili was first proposed at JINR by S.N. Sokolov~\cite{fum_1st} and developed by I.N.~Silin and V.S.~Kurbatov.
+The greedy minimization algorithm which is employed in Fumili was first proposed at JINR by S.N. Sokolov~\cite{fum_1st} and developed by I.N.~Silin and V.S.~Kurbatov~\cite{fum_prog}.
 It linearizes the second derivatives, so the error matrix is always positively defined, and thus each step leads to a minimum.
 Since Fumili is designed specifically to minimize $\chi^2$-like functionals, it finds a minimum faster and requires significantly fewer calls to the computationally intensive objective function than non-specialized minimization algorithms.
 
