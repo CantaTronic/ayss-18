@@ -15,7 +15,7 @@
 % The minimum search for the functional \eqref{track_fit} could be formulated as a conditional-minimization problem in canonical form, 
 % taking into account the known 
 
-Conservation laws (\ref{cons_full}--\ref{cons_miss}) could be expressed as
+Conservation laws (\ref{cons_full}--\ref{cons_miss}), could be expressed as
 % Поставленная задача нахождения минимума функционала \eqref{track_fit} может быть сформулирована как задача условной минимизации в канонической форме, с учетом известных законов сохранения \eqref{cons_full}--\eqref{cons_miss}, выраженных в виде:
 \begin{equation}
 \label{eq:constr}
@@ -25,7 +25,10 @@ where $m$ is a number of constraints.
 
 Then \eqref{track_fit}, \eqref{eq:constr} is a constraint minimization problem written into the augmented form.
 
-The subject of interest is cases when the system of equations \eqref{eq:constr} is non-linear and solving it directly is either impossible or impractical. % в условиях заданных внешних ораничений?
+The cases of interest are those where system \eqref{track_fit}, \eqref{eq:constr} is non-linear and could not be practically solved in a straightforward way, with taking in account practical time and memory limitations. % в условиях заданных внешних ораничений?
 % Предмет интереса представляют случаи, когда система \eqref{eq:constr} является нелинейной и её решение ``в лоб'' является невозможным либо нецелесообразным в условиях заданных внешних ораничений.
-So we need not to lose important information and make calculations as accurately as possible, at the same time keeping within the limitations of time and computational intensity of the work.
+% So we need not to lose important information and make calculations as accurately as possible, at the same time keeping within the limitations of time and computational intensity of the work.
 % Возникает необходимость не потерять важную информацию и провести расчёты максимально точно, при этом уложившись в ограничения по времени и трудоемкости работы.
+
+% Отличительной особенностью задач кинематического фита, как задачи минимизации со связями является то, что функционал (1) здесь зависит не просто от параметров, но от функции этих параметров.
+% The distinctive feature of the kinematic fitting problems is that the functional \eqref{track_fit} here depends not only on parameters $\boldsymbol{p}$, but on the function $\hat{c}(\boldsymbol{p})$.
