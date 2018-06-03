@@ -1,17 +1,17 @@
 %programming realization
 
 % \textcolor{red}{
-% TODO: There must be an explanation of why we include it specifically in Fumili.
-% Well, or it should appear in the previous part, where we've spoken about Fumili.
+% TODO: There must be an explanation of why we include it specifically in FUMILI.
+% Well, or it should appear in the previous part, where we've spoken about FUMILI.
 % }
-Fumili, a package for minimizing $\chi^2$-like functionals, is one of the first minimizers included into ROOT release.
+FUMILI, a package for minimizing $\chi^2$-like functionals, is one of the first minimizers included into ROOT release.
 It has been showing it's reliability, stability and high convergence rate while it had been being used by scientific community for decades.
 
-The greedy minimization algorithm which is employed in Fumili was first proposed at JINR by S.N. Sokolov~\cite{fum_1st} and developed by I.N.~Silin and V.S.~Kurbatov~\cite{fum_prog}.
+The greedy minimization algorithm which is employed in FUMILI was first proposed at JINR by S.N. Sokolov~\cite{fum_1st} and developed by I.N.~Silin and V.S.~Kurbatov~\cite{fum_prog}.
 It linearizes the second derivatives, so the error matrix is always positively defined, and thus each step leads to a minimum.
-Since Fumili is designed specifically to minimize $\chi^2$-like functionals, it finds a minimum faster and requires significantly fewer calls to the computationally intensive objective function than non-specialized minimization algorithms.
+Since FUMILI is designed specifically to minimize $\chi^2$-like functionals, it finds a minimum faster and requires significantly fewer calls to the computationally intensive objective function than non-specialized minimization algorithms.
 
-An implementation for the method of elimination of differentials has been designed as an extension of Fumili.
+An implementation for the method of elimination of differentials has been designed as an extension of FUMILI.
 A corresponding class inherits from the ROOT class TFumili and adds the methods for setting constraints and their derivatives.
 
 %очень общая схема включения дополнения в Fumili и ROOT
