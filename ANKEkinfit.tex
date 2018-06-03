@@ -5,7 +5,7 @@ The developed Fumili extension was used by the authors to perform the kinematic 
 % На рисунке \eqref{anke_scheme} можно видеть, что в процессе прохождения протонного пучка через установку часть протонов может отклоняться от направления основного пучка и не фиксироваться установкой, таким образом при анализе данных эксперимента мы можем столкнуться с разницей зафиксированных энергий и количества вещества, вступившего в реакцию с данными, полученными на выходе. Восстановить долю таких ``потерянных'' протонов мы можем, используя инвариант Лоренца $\left|\boldsymbol{P}^{(4)}_\mathrm{beam}+\boldsymbol{P}^{(4)}_\mathrm{targ}-\boldsymbol{P}^{(4)}_p\right|^2 = m_p^2$.
 
 \begin{figure}[htbp]\centering
-\includegraphics[width=0.8\textwidth]{pics/setup_.eps}
+\includegraphics[width=0.8\textwidth]{pics/setup_bw.eps}
 \caption{
 A scheme of the $pp \to pp$ reaction being registered in the ANKE forward detector. Other ANKE detectors are not shown.
 }
@@ -58,15 +58,18 @@ For the study under consideration, the reconstructed coordinates $\hat{c}_k$ are
 % \phantom{0}
 
 \begin{figure}[htbp]\centering
-\includegraphics[width=0.9\textwidth]{pics/anke_errs.pdf}
+\includegraphics[height=0.3\textheight]{pics/drawMom.eps}
+\includegraphics[height=0.3\textheight]{pics/drawTh.eps}
+\includegraphics[height=0.3\textheight]{pics/drawPhi.eps}
 \caption{
-Errors of reconstructed proton momentum in polar coordinates $(|P_p^\mathrm{cm}|, \theta_p^\mathrm{cm}, \phi_p^\mathrm{cm})$ for the $pp \to pp$ reaction at ANKE, simulated for $T_\mathrm{beam} = 700$~MeV with and without kinematic fitting.
+Errors of reconstructed proton momentum in polar coordinates $(|\boldsymbol{p}_p^\mathrm{cm}|, \theta_p^\mathrm{cm}, \phi_p^\mathrm{cm})$ for the $pp \to pp$ reaction at ANKE, simulated for $T_\mathrm{beam} = 700$~MeV either with (a) or without (b) kinematic fitting.
 }
 \label{anke_errs}
 \end{figure}
 
 In order to check the improvement of the momentum precision, about 700\,000 $pp \to pp$ events were simulated and then reconstructed either with or without kinematic constraint \eqref{cons_miss}.
 The reconstruction precision for momenta in polar coordinates in center of mass system is shown in fig.~\ref{anke_errs}.
-Since $pp \to pp$ is a binary reaction, the condition \eqref{cons_miss} fixes the absolute value of the momentum to the delta function.
-
+Since $pp \to pp$ is a binary reaction, the condition \eqref{cons_miss} fixes the absolute value of the momentum $|\boldsymbol{p}_p^\mathrm{cm}|$ to the delta function.
+Kinematic fitting improves the precision of the polar angle $\theta_p^\mathrm{cm}$ nearly twice.
+For the azimuthal angle $\phi_p^\mathrm{cm}$ the improvement not so significant and can be noticed only at the edges of the acceptance.
 % For the analysis purposes 
